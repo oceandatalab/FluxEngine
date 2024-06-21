@@ -30,12 +30,12 @@
 			 longName="Sea surface skin temperature used for the flux calculations">
 		</DataLayer>
 
-		<DataLayer name="sstskinC" netCDFName="ST1_mean" units="degreeC" minBound="-1.8" maxBound="100.0"
+		<DataLayer name="sstskinC" netCDFName="ST1_mean" units="degreeC" minBound="-2.0" maxBound="100.0"
 			 standardName="sea_surface_skin_temperature"
 			 longName="Sea surface skin temperature used for the flux calculations">
 		</DataLayer>
 
-		<DataLayer name="sstskin_stddev" netCDFName="ST1_stddev" units="degreeC" minBound="-1.8" maxBound="100.0"
+		<DataLayer name="sstskin_stddev" netCDFName="ST1_stddev" units="degreeC" minBound="-2.0" maxBound="100.0"
 			 standardName="sea_surface_skin_temperature_stddev"
 			 longName="Standard deviation of Sea surface skin temperature used to create the mean sea surface skin data">
 		</DataLayer>
@@ -45,7 +45,7 @@
 			 longName="Count of data points of Sea surface skin temperature used to create the mean sea surface skin data">
 		</DataLayer>
 
-		<DataLayer name="sstfndC" netCDFName="FT1_mean" units="degreeC" minBound="-1.8" maxBound="100.0"
+		<DataLayer name="sstfndC" netCDFName="FT1_mean" units="degreeC" minBound="-2.0" maxBound="100.0"
 			 standardName="sea_surface_foundation_temperature"
 			 longName="foundation SST used for the flux calculations">
 		</DataLayer>
@@ -97,12 +97,12 @@
 			longName="Precipitation Estimate from EO and/or satellite/gauge combined data set">
 		</DataLayer>
 
-		<DataLayer name="vgas_air" netCDFName="V_gas" units="micromol mol-1" minBound="0.0" maxBound="500.0"
+		<DataLayer name="vgas_air" netCDFName="V_gas" units="micromol mol-1" minBound="0.0" maxBound="600.0"
 			standardName="dry_molecular_fraction_of_${GAS}_in_atmosphere"
 			longName="Concentration ${GAS} in dry air (ppm) or dry molecular fraction of ${GAS} in the atmosphere (umol mol-1)">
 		</DataLayer>
 
-		<DataLayer name="pgas_air" netCDFName="pgas_air" units="microatm" minBound="0.0" maxBound="500.0"
+		<DataLayer name="pgas_air" netCDFName="pgas_air" units="microatm" minBound="0.0" maxBound="600.0"
 			standardName="partial_pressure_of_${GAS}_in_air"
 			longName="partial pressure of ${GAS} in air">
 		</DataLayer>
@@ -147,24 +147,24 @@
 			longName="Longhurst provinces">
 		</DataLayer>
 
-		<DataLayer name="pgas_sw" netCDFName="SFUG_krig" units="microatm" minBound="0.0" maxBound="1000.0"
+		<DataLayer name="pgas_sw" netCDFName="SFUG_krig" units="microatm" minBound="0.0" maxBound="2000.0"
 			 standardName="surface_partial_pressure_of_${GAS}_in_sea_water"
 			 longName="p${GAS} in sea water from climtology">
 		</DataLayer>
 
-		<DataLayer name="pco2_sst" units="degreeC" minBound="-1.8" maxBound="30.5"></DataLayer>
+		<DataLayer name="pco2_sst" units="degreeC" minBound="-2.0" maxBound="40.0"></DataLayer>
 
-		<DataLayer name="pgas_sw_stddev" netCDFName="SFUG_stddev" units="microatm" minBound="0.0" maxBound="1000.0"
+		<DataLayer name="pgas_sw_stddev" netCDFName="SFUG_stddev" units="microatm" minBound="0.0" maxBound="2000.0"
 			 standardName="surface_partial_pressure_of_${GAS}_in_sea_water"
 			 longName="p${GAS} in sea water from climtology">
 		</DataLayer>
 
-		<DataLayer name="pgas_air_cor" netCDFName="OAPC1" units="microatm" minBound="0.0" maxBound="500.0"
+		<DataLayer name="pgas_air_cor" netCDFName="OAPC1" units="microatm" minBound="0.0" maxBound="600.0"
 			 standardName="water_surface_partial_pressure_of_${GAS}_in_air"
 			 longName="Water surface partial pressure of ${GAS} in air from climtology corrected using modelled sea level pressure">
 		</DataLayer>
 
-		<DataLayer name="pgas_sw_cor" netCDFName="OBPC" units="microatm" minBound="0.0" maxBound="1000.0"
+		<DataLayer name="pgas_sw_cor" netCDFName="OBPC" units="microatm" minBound="0.0" maxBound="2000.0"
 			 standardName="sub_skin_partial_pressure_of_${GAS}_in_sea_water"
 			 longName="Sub skin partial pressure of ${GAS}">
 		</DataLayer>
@@ -180,7 +180,7 @@
 			 longName="Air-sea ${GAS} flux using the %s gas transfer velocity (k)">
 			 </DataLayer> <!-- Oddly minBoundmaxBound is overwritten in flux engine to -1000+1000 -->
 
-		<DataLayer name="kt" netCDFName="OK1" units="cm h-1" minBound="0.0" maxBound="100.0"
+		<DataLayer name="kt" netCDFName="OK1" units="cm h-1" minBound="0.0" maxBound="500.0"
 			 standardName="total_gas_transfer_velocity_of_${GAS}"
 			 longName="OceanFluxGHG total (kd+kb) gas transfer velocity">
 			 </DataLayer>
@@ -207,12 +207,12 @@
 			 longName="Gas transfer velocity due to rain from Ho et al Tellus 1997">
 			 </DataLayer>
 
-		<DataLayer name="salinity" netCDFName="OKS1" units="count" minBound="15.0" maxBound="40.0"
+		<DataLayer name="salinity" netCDFName="OKS1" units="count" minBound="0.0" maxBound="50.0"
 			standardName="sea_water_salinity"
 			longName="salinity in sea water">
 		</DataLayer>
 
-		<DataLayer name="salinity_skin" netCDFName="salinity_skin" units="count" minBound="15.0" maxBound="40.0"
+		<DataLayer name="salinity_skin" netCDFName="salinity_skin" units="count" minBound="0.0" maxBound="50.0"
 			standardName="sea_water_skin_salinity"
 			longName="salinity in sea water at the skin layer">
 		</DataLayer>
@@ -245,7 +245,7 @@
 			longName="Concentration of carbon dioxide at the sea water and air interface in g-C m^-3">
 		</DataLayer>
 -->
-		<DataLayer name="dpco2_cor" netCDFName="dpCO2" units="mictoatm" minBound="-500.0" maxBound="500.0"
+		<DataLayer name="dpco2_cor" netCDFName="dpCO2" units="mictoatm" minBound="-1000.0" maxBound="1000.0"
 			standardName="difference_in_water_and_air_partial_pressure_of_carbon_dioxide"
 			longName="Delta pCO2">
 		</DataLayer>
@@ -487,10 +487,3 @@
 	longName="">
 </DataLayer>
 -->
-
-
-
-
-
-
-
