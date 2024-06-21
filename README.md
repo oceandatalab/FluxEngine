@@ -1,12 +1,16 @@
 FluxEngine
 ==========
+Main contacts: Jamie D. Shutler (j.d.shutler@exeter.ac.uk) and Daniel J. Ford (d.ford@exeter.ac.uk)
 
-The FluxEngine is an open source atmosphere-ocean gas flux data processing toolbox. The toolbox has so far contributed to 13 different journal publications, resulting in 5 press releases, contributed to 2 completed PhDs and 1 ongoing PhD, has been used within 5 UK and EU research projects and has been used in undergraduate and masters level teaching. It is now being used within the European Integrated Carbon Observing System (ICOS).  This work collectively identifies and quantifies the importance of the oceans in regulating and storing carbon. 
+The FluxEngine is an open source atmosphere-ocean gas flux data processing toolbox. The toolbox has so far contributed to 13 different journal publications, resulting in 5 press releases, contributed to 2 completed PhDs and 1 ongoing PhD, has been used within 5 UK and EU research projects and has been used in undergraduate and masters level teaching. It is now being used within the European Integrated Carbon Observing System (ICOS).  This work collectively identifies and quantifies the importance of the oceans in regulating and storing carbon.
 
 Known issues with v4.0.7
 ----
 01 Sep 2022 - There is a known error with calculating fluxes using concentration data (thanks Silvie Lainela for finding this error and Tom Holding for identify the work around). With this option you have to set and use conca and concw as the main inputs. But the tools incorrectly request pgas_air and pgas_sw inputs (which are not used in the flux calculation when you use concentration data). To overcome this simply define and pass pgas_air and pgas_sw data as an additional input i.e. create a file containing NaN or 0s and add the information into the configuration file. This will allow the calculations to complete and the pgas data will not be used in the calculation. This error will be fixed in the next release of the fluxengine.
 
+21 June 2024 - A known issue with the netCDF outputs of FluxEngine when running at daily resolution (identified by Daniel Ford). The issue is due to a netCDF global attribute being output incorrectly such that the append2insitu function is unable to correctly attach the output variables to the insitu text file. Currently the data can be extracted and appended manually and this error will be fixed shortly.
+
+21 June 2024 - The reanalysis functions for the SOCAT data have undergone updates for the University of Exeter processing and publication of the reanalysed datasets (see reanalysed SOCAT datasets section). These updates will be implemented into FluxEngine during 2024. These updates include: updated the temperature coefficient to that in Wanninkhof et al. (2022; https://doi.org/10.1016/j.marchem.2022.104178), removed the "hardcoding" to the OISST dataset to allow the use of other dataset (such as the CCI-SST). Further updates funded under the Ocean Carbon for Climate ESA project will see further extensions to reanalyse data at daily resolution instead of monthly.
 
 Version 4.0.
 ----
@@ -22,11 +26,11 @@ Please reference these journal publications when using this toolbox and presenti
 
 Re-analysed SOCAT datasets
 ----
-Each year we used the FluxEngine to reanalyse the latest version of the Surface Ocean CO2 Atlas (SOCAT) database (https://www.socat.info).  We provide this service for free and typically provide links to the reanalysed data a few weeks after the new release of the SOCAT database. The original SOCAT data are all sampled from different depths and each measurement is tied to a temperature values, but the sources of the temperature data varies. This makes these data less ideal for global air-sea flux analyses. To enable an accurate air-sea flux calculation they need to be reanalysed to a common depth and temperature dataset. The reanalysed SOCAT data that we provide are all referenced to a common sampling depth and temperature dataset and the pairing between CO2 data and temperature is retained.  The tools and methods that perform the reanalysis are detailed within the FluxEngine publications. The reanalysed datasets contain the individual cruise version of the SOCAT database and the gridded SOCAT data. 
+Each year we used the FluxEngine to reanalyse the latest version of the Surface Ocean CO2 Atlas (SOCAT) database (https://www.socat.info).  We provide this service for free and typically provide links to the reanalysed data a few weeks after the new release of the SOCAT database. The original SOCAT data are all sampled from different depths and each measurement is tied to a temperature values, but the sources of the temperature data varies. This makes these data less ideal for global air-sea flux analyses. To enable an accurate air-sea flux calculation they need to be reanalysed to a common depth and temperature dataset. The reanalysed SOCAT data that we provide are all referenced to a common sampling depth and temperature dataset and the pairing between CO2 data and temperature is retained.  The tools and methods that perform the reanalysis are detailed within the FluxEngine publications. The reanalysed datasets contain the individual cruise version of the SOCAT database and the gridded SOCAT data.
 
-Please read the dataset metadata when using these data and please follow the guidelines in the metadata when referencing and acknowleging their use. 
+Please read the dataset metadata when using these data and please follow the guidelines in the metadata when referencing and acknowleging their use.
 
-Ford, D. J., Sims, R. P., Shutler, J. D., Ashton, I., & Holding, T. (2023). Reanalysed (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2023 (Version 2023-0) [Data set]. Zenodo. https://doi.org/10.5281/ZENODO.8229316 
+Ford, D. J., Sims, R. P., Shutler, J. D., Ashton, I., & Holding, T. (2023). Reanalysed (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2023 (Version 2023-0) [Data set]. Zenodo. https://doi.org/10.5281/ZENODO.8229316
 
 Sims, R. P., Ford, D. J., Shutler, J. D., Ashton, I., & Holding, T. (2023). Reanalysed (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2022 (Version v2022-0) [Data set]. Zenodo. https://doi.org/10.5281/ZENODO.8228586
 
@@ -51,9 +55,9 @@ Example news articles (resulting from research performed using the FluxEngine)
 5. BBC News (2016), 'How Northern European waters soak up carbon dioxide' https://www.bbc.co.uk/news/science-environment-35654938
 
 
-Animation 
+Animation
 ----
-A short animation explaining the concepts of atmosphere-ocean gas exchange, why this is important, and what the FluxEngine enables 
+A short animation explaining the concepts of atmosphere-ocean gas exchange, why this is important, and what the FluxEngine enables
 http://due.esrin.esa.int/stse/videos/page_video013.php
 
 
@@ -63,7 +67,7 @@ Gutiérrez Loza, L., Wallin, M. B., Sahlée, E., Holding, T., Shutler, J. D., Re
 
 Friedlingstein et al, (2021), Global Carbon Budget 2020, Earth Syst. Sci. Data, 12, 3269–3340, https://doi.org/10.5194/essd-12-3269-2020.  
 
-Watson, A.J., Schuster, U., Shutler, J.D. et al. Revised estimates of ocean-atmosphere CO2 flux are consistent with ocean carbon inventory. Nature Communications 11, 4422 (2020). https://doi.org/10.1038/s41467-020-18203-3 
+Watson, A.J., Schuster, U., Shutler, J.D. et al. Revised estimates of ocean-atmosphere CO2 flux are consistent with ocean carbon inventory. Nature Communications 11, 4422 (2020). https://doi.org/10.1038/s41467-020-18203-3
 
 Kitidis, V., Shutler, JD., Ashton, I. et al (2020) Winter weather controls net influx of atmospheric CO2 on the north-west European shelf, Scientific Reports, 9(20153), https://www.nature.com/articles/s41598-019-56363-5
 
@@ -98,7 +102,7 @@ Version 3.0 (static as of 02 August 2019).
 ----
 v3.0 (first release April 2018, updated September 2018, February 2019, April 2019, June 2019, July 2019, static 02 August 2019)
 
-Version 3 (v3.0) uses Python 2.7 and has been verified against reference runs using SOCATv4 pCO2 and all results were identical to those produced using FluxEngine v2.0. A more comprehensive verification has been performed using references runs of the Takahashi et al. (2009) dataset as described in Shutler et al. (2016) http://journals.ametsoc.org/doi/abs/10.1175/JTECH-D-14-00204.1. All results were identical to those produced using v1.0 and v2.0. A journal paper describing the v3.0 updates is now available, Holding et al., (2019) and can be found here https://doi.org/10.5194/os-15-1707-2019. 
+Version 3 (v3.0) uses Python 2.7 and has been verified against reference runs using SOCATv4 pCO2 and all results were identical to those produced using FluxEngine v2.0. A more comprehensive verification has been performed using references runs of the Takahashi et al. (2009) dataset as described in Shutler et al. (2016) http://journals.ametsoc.org/doi/abs/10.1175/JTECH-D-14-00204.1. All results were identical to those produced using v1.0 and v2.0. A journal paper describing the v3.0 updates is now available, Holding et al., (2019) and can be found here https://doi.org/10.5194/os-15-1707-2019.
 
 Please reference these journal publications when using this toolbox and presenting its output in any publications.
 
@@ -121,11 +125,11 @@ The updates included contribute to further publications in preparation and furth
 The updates include improved:
 
     •   handling for irregular grids,
-    •   handling for different gases including O2, N2O and CH4, 
+    •   handling for different gases including O2, N2O and CH4,
     •   handling for in-situ data.
 
-Specifically, data on irregular grids can now be handled through the main flux calculations. Note: the ofluxghg-flux-budgets.py tool is only valid for regular (1deg x 1deg) grids. 
-In-situ data should be put in separate netCDF files and the last two digits of the filename needs to represent the month of interest as a two digit number. e.g. January -> ’01’. 
+Specifically, data on irregular grids can now be handled through the main flux calculations. Note: the ofluxghg-flux-budgets.py tool is only valid for regular (1deg x 1deg) grids.
+In-situ data should be put in separate netCDF files and the last two digits of the filename needs to represent the month of interest as a two digit number. e.g. January -> ’01’.
 To operate the system with different gases, the appropriate switch should be changed in ofluxghg-flux-calc.py. Please use ofluxghg-flux-calc.py --help for further information.
 
 
@@ -136,4 +140,3 @@ Please reference the publication linked below when using this toolbox and presen
 A journal paper describing the toolbox has been published here: Shutler et al., (2016) http://journals.ametsoc.org/doi/abs/10.1175/JTECH-D-14-00204.1
 Please send any feedback and comments to Jamie Shutler, email: j.d.shutler@exeter.ac.uk
 The FluxEngine software was originally developed by The European Space Agency OceanFlux Greenhouse Gases and Evolution project teams.
-
