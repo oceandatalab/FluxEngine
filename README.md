@@ -46,7 +46,7 @@ Holding T, Ashton I, Shutler, J (2019). Reanalysed (depth and temperature consis
 
 Example news articles (resulting from research performed using the FluxEngine)
 ----
-1. The Daily Mail 'World's oceans soak up 900 million tonnes of CO2 a year MORE than previously thought — the amount emitted by 2.2 billion petrol cars' https://www.dailymail.co.uk/sciencetech/article-8698067/Worlds-oceans-soak-carbon-previously-thought.html
+1. The Daily Mail (2020) 'World's oceans soak up 900 million tonnes of CO2 a year MORE than previously thought — the amount emitted by 2.2 billion petrol cars' https://www.dailymail.co.uk/sciencetech/article-8698067/Worlds-oceans-soak-carbon-previously-thought.html
 
 2. Phys.org (2019) 'Satellites are key to monitoring ocean carbon' https://phys.org/news/2019-11-satellites-key-ocean-carbon.html
 
