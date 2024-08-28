@@ -30,6 +30,8 @@ Each year we used the FluxEngine to reanalyse the latest version of the Surface 
 
 Please read the dataset metadata when using these data and please follow the guidelines in the metadata when referencing and acknowleging their use.
 
+Daniel J. Ford, Jamie D. Shutler, Ian Ashton, Richard P. Sims, & Thomas Holding. (2024). Reanalysed (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2024 (v1.1) (v1.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.13284017
+
 Ford, D. J., Sims, R. P., Shutler, J. D., Ashton, I., & Holding, T. (2023). Reanalysed (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2023 (Version 2023-0) [Data set]. Zenodo. https://doi.org/10.5281/ZENODO.8229316
 
 Sims, R. P., Ford, D. J., Shutler, J. D., Ashton, I., & Holding, T. (2023). Reanalysed (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2022 (Version v2022-0) [Data set]. Zenodo. https://doi.org/10.5281/ZENODO.8228586
@@ -63,6 +65,18 @@ http://due.esrin.esa.int/stse/videos/page_video013.php
 
 Journal publications (which use FluxEngine and/or FluxEngine outputs)
 ----
+Friedlingstein et al, (2023), Global Carbon Budget 2023, Earth Syst. Sci. Data, 15, 5301–5369, https://doi.org/10.5194/essd-15-5301-2023.
+
+Ford DJ, Tilstone GH, Shutler JD, Kitidis V, Sheen KL, Dall’Olmo G, Orselli IBM (2023). Mesoscale Eddies Enhance the Air‐Sea CO2 Sink in the South Atlantic Ocean. Geophysical Research Letters, 50(9). 
+
+Friedlingstein et al, (2022), Global Carbon Budget 2022, Earth Syst. Sci. Data,14, 4811–4900, https://doi.org/10.5194/essd-14-4811-2022.
+
+Ford DJ, Tilstone GH, Shutler JD, Kitidis V (2022). Derivation of seawater pCO2 from net community production identifies the South Atlantic Ocean as a CO2 source. Biogeosciences, 19(1), 93-115
+
+Ford DJ, Tilstone GH, Shutler JD, Kitidis V (2022). Identifying the biological control of the annual and multi-year variations in South Atlantic air-sea CO2 flux. Biogeosciences, 19(17), 4287-4304. 
+
+Friedlingstein et al, (2021), Global Carbon Budget 2021, Earth Syst. Sci. Data, 14, 1917–2005, https://doi.org/10.5194/essd-14-1917-2022.
+
 Gutiérrez Loza, L., Wallin, M. B., Sahlée, E., Holding, T., Shutler, J. D., Rehder, G. & Rutgersson, A. (2021). Air–sea CO2 exchange in the Baltic Sea—A sensitivity analysis of the gas transfer velocity. Journal of Marine Systems, 222, https://www.sciencedirect.com/science/article/pii/S0924796321001007
 
 Friedlingstein et al, (2021), Global Carbon Budget 2020, Earth Syst. Sci. Data, 12, 3269–3340, https://doi.org/10.5194/essd-12-3269-2020.  
