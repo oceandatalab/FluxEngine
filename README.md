@@ -2,7 +2,7 @@ FluxEngine
 ==========
 Main contacts: Jamie D. Shutler (j.d.shutler@exeter.ac.uk) and Daniel J. Ford (d.ford@exeter.ac.uk)
 
-The FluxEngine is an open source atmosphere-ocean gas flux data processing toolbox. The toolbox has so far contributed to 13 different journal publications, resulting in 5 press releases, contributed to 2 completed PhDs and 1 ongoing PhD, has been used within 5 UK and EU research projects and has been used in undergraduate and masters level teaching. It is now being used within the European Integrated Carbon Observing System (ICOS).  This work collectively identifies and quantifies the importance of the oceans in regulating and storing carbon.
+The FluxEngine is an open source atmosphere-ocean gas flux data processing toolbox. The toolbox has so far contributed to 23 different journal publications, resulting in 6 press releases, has contributed to 3 completed PhDs, has been used within 7 UK and EU research projects, and 5 European Space Agency reasearch projects, and it has been used in undergraduate and masters level teaching (in the UK and Europe) including ICOS and IOCCP training. This work collectively identifies and quantifies the importance of the oceans in regulating and storing carbon.
 
 Known issues with v4.0.7
 ----
@@ -46,15 +46,17 @@ Holding T, Ashton I, Shutler, J (2019). Reanalysed (depth and temperature consis
 
 Example news articles (resulting from research performed using the FluxEngine)
 ----
-1. The Daily Mail (2020) 'World's oceans soak up 900 million tonnes of CO2 a year MORE than previously thought — the amount emitted by 2.2 billion petrol cars' https://www.dailymail.co.uk/sciencetech/article-8698067/Worlds-oceans-soak-carbon-previously-thought.html
+1. The Guardian (2024) 'Sliver of cool surface water 2mm deep helps oceans absorb CO2, say scientists' https://www.theguardian.com/environment/2024/oct/25/ocean-skin-cool-surface-water-deep-helps-absorb-co2
 
-2. Phys.org (2019) 'Satellites are key to monitoring ocean carbon' https://phys.org/news/2019-11-satellites-key-ocean-carbon.html
+2. The Daily Mail (2020) 'World's oceans soak up 900 million tonnes of CO2 a year MORE than previously thought — the amount emitted by 2.2 billion petrol cars' https://www.dailymail.co.uk/sciencetech/article-8698067/Worlds-oceans-soak-carbon-previously-thought.html
 
-3. ESA news (2019), 'Can oceans turn the tide on the climate crisis' https://www.esa.int/Our_Activities/Observing_the_Earth/Can_oceans_turn_the_tide_on_the_climate_crisis
+3. Phys.org (2019) 'Satellites are key to monitoring ocean carbon' https://phys.org/news/2019-11-satellites-key-ocean-carbon.html
 
-4. The Guardian (2018), 'Invisible scum on sea cuts CO2 exchange with air by up to 50%' https://www.theguardian.com/environment/2018/may/28/invisible-scum-on-sea-cuts-co2-exchange-with-air-by-up-to-50
+4. ESA news (2019), 'Can oceans turn the tide on the climate crisis' https://www.esa.int/Our_Activities/Observing_the_Earth/Can_oceans_turn_the_tide_on_the_climate_crisis
 
-5. BBC News (2016), 'How Northern European waters soak up carbon dioxide' https://www.bbc.co.uk/news/science-environment-35654938
+5. The Guardian (2018), 'Invisible scum on sea cuts CO2 exchange with air by up to 50%' https://www.theguardian.com/environment/2018/may/28/invisible-scum-on-sea-cuts-co2-exchange-with-air-by-up-to-50
+
+6. BBC News (2016), 'How Northern European waters soak up carbon dioxide' https://www.bbc.co.uk/news/science-environment-35654938
 
 
 Animation
@@ -65,6 +67,10 @@ http://due.esrin.esa.int/stse/videos/page_video013.php
 
 Journal publications (which use FluxEngine and/or FluxEngine outputs)
 ----
+Ford, D.J., Shutler, J.D., Blanco-Sacristán, J. et al. Enhanced ocean CO2 uptake due to near-surface temperature gradients. Nat. Geosci. (2024). https://doi.org/10.1038/s41561-024-01570-7
+
+Ford, D.J., Blannin, J., Watts, J., Watson, A.J., Landschützer, P., Jersild, A. and Shutler, J.D., 2024. A comprehensive analysis of air‐sea CO2 flux uncertainties constructed from surface ocean data products. Global Biogeochemical Cycles, 38(11), p.e2024GB008188.
+
 Friedlingstein et al, (2023), Global Carbon Budget 2023, Earth Syst. Sci. Data, 15, 5301–5369, https://doi.org/10.5194/essd-15-5301-2023.
 
 Ford DJ, Tilstone GH, Shutler JD, Kitidis V, Sheen KL, Dall’Olmo G, Orselli IBM (2023). Mesoscale Eddies Enhance the Air‐Sea CO2 Sink in the South Atlantic Ocean. Geophysical Research Letters, 50(9). 
