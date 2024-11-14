@@ -5,6 +5,17 @@ import numpy as np
 from . import datenum
 import tempfile
 
+# Numpy is required to be >= 1.16 according to setup.py
+np_major, np_minor, _ = np.__version__.split('.')
+if (int(np_major), int(np_minor)) >= (1, 24):
+    # Type aliases numpy.int and numpy.float have been removed from numpy
+    # starting version 1.24.0
+    np_int = int
+    np_float = float
+else:
+    np_int = np.int
+    np_float = np.float
+
 # Constants
 R = 82.0578 # cm^3 atm/(mol K)
 hPa2atm = 100. * 9.867E-06
@@ -28,22 +39,22 @@ def v2_f_conversion_wrap(jds,data_array,Tcls,Peq_cls,extrapolatetoyear=None):
       return None
    else:
       #concatenate arrays into single, structured array for return
-      result=np.recarray((jd.size,),dtype=[('jd',np.float),
+      result=np.recarray((jd.size,),dtype=[('jd',np_float),
                                            ('yr',np.int32),
                                            ('mon',np.int32),
                                            ('day', np.int32),
                                            ('hh', np.int32),
                                            ('mm', np.int32),
                                            ('ss', np.int32),
-                                           ('lat',np.float),
-                                           ('lon',np.float),
-                                           ('SST_C',np.float),
-                                           ('Tcl_C',np.float),
-                                           ('fCO2_SST',np.float),
-                                           ('fCO2_Tym',np.float),
-                                           ('pCO2_SST',np.float),
-                                           ('pCO2_Tym',np.float),
-                                           ('qf',np.int)]);
+                                           ('lat',np_float),
+                                           ('lon',np_float),
+                                           ('SST_C',np_float),
+                                           ('Tcl_C',np_float),
+                                           ('fCO2_SST',np_float),
+                                           ('fCO2_Tym',np_float),
+                                           ('pCO2_SST',np_float),
+                                           ('pCO2_Tym',np_float),
+                                           ('qf',np_int)]);
       result['jd']=jd
       result['yr']=yr;
       result['mon']=mon;
