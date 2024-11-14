@@ -13,6 +13,7 @@ This includes:
 """
 
 from os import path, listdir, makedirs;
+import sys
 import inspect;
 import time;
 import socket; #for gethostname
@@ -26,6 +27,11 @@ from fluxengine.core import data_preprocessing as data_preprocessing; #preproces
 from fluxengine.core import process_indicator_layers as indicator_layers; #Process indicator layer functors
 from fluxengine.core import fe_core as fluxengine;
 
+if sys.version_info > (3, 10):
+    # inspect.getargspec has been removed from Python starting version 3.11.0
+    inspect_argspec = inspect.getfullargspec
+else:
+    inspect_argspec = inspect.getargspec
 
 #Gets the root fluxengine directory
 def get_fluxengine_root():
@@ -457,7 +463,7 @@ def build_k_functor(runParameters, customGTVPath=None):
                 #Check it derives from KCalculateBase - this is used as a simple way to filter out irrelevant classes
                 if issubclass(ClassHandle, k_params.KCalculationBase):
                     #To initialise the class we need to know the arguments it's __init__ function uses.
-                    initialiserArgNames = [arg for arg in inspect.getargspec(ClassHandle.__init__).args if arg != "self"];
+                    initialiserArgNames = [arg for arg in inspect_argspec(ClassHandle.__init__).args if arg != "self"];
                     
                     try:
                         #Create a dictionary of name:value pairs for the __init__ arguments. Assumes arguments match config file names.
